@@ -8,7 +8,8 @@ import img1 from '@img/aaa.png'
 import cookieRef from '@/utils/cookieRef'
 // import avatardefaultImg from '@img/account/member_avatar_default.png'
 
-const queryToken = import.meta.env.SSR ? null : new URLSearchParams(location.search).get('token')
+// const queryToken = import.meta.env.SSR ? null : new URLSearchParams(location.search).get('token')
+const queryToken = import.meta.env.SSR ? null : 'fakeToken'
 
 export const useUserStore = defineStore('user', () => {
   const webStore = useWebStore()
