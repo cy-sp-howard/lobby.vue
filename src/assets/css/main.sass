@@ -1,0 +1,72 @@
+@import 'classes','keyframes'
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap')
+
+*
+  -webkit-tap-highlight-color: transparent
+  box-sizing: border-box
+  font-family: 'Noto Sans SC', sans-serif
+  &:focus
+    outline: none
+
+:root
+  --rk-form-item-height: 35px
+  --rk-form-item-width: 340px
+  --rk-disabled-opacity: 0.4
+  --rk-bg: white
+  --rk-border: #E6E6E6
+  --z-dialog: 1000
+  --z-menu: 1001
+  --z-popup: 50
+  --z-scroll: 100
+  --z-progress: 999
+  --font-color: #727272
+  font-size: 16px
+  color: var(--font-color)
+
+body
+  padding: 0
+  margin: 0
+
+p,pre
+  margin: 0
+
+ul
+  margin: 0
+  padding: 0
+li
+  list-style: none
+
+ol
+  margin: 0
+  padding: 0
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  margin: 0
+
+textarea,input,select
+  border: 0
+  appearance: none
+  background: transparent
+  &::-ms-reveal,
+  &::-ms-clear,
+  &::-ms-expand
+    display: none
+
+a
+  text-decoration: none
+  cursor: pointer
+  &:active
+    transform: scale(0.95) !important
+
+button
+  border: none
+  background: none
+  padding: 0
+  cursor: pointer
+  &:active
+    transform: scale(0.95) !important

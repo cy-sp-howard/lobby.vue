@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 450 100">
+<circle cx="50" cy="50" r="50" stroke-width="0" fill="currentColor"   opacity="0.4">
+<animate  id="a1" attributeName="opacity" values="0.4;1" dur="0.4s"   begin="0s;b3.end" fill="freeze" ></animate>
+<animate  id="b1" attributeName="opacity" values="1;0.4" dur="0.4s"   begin="a3.end" fill="freeze" ></animate>
+
+</circle>
+  <circle  cx="225" cy="50" r="50" stroke-width="0" fill="currentColor"  opacity="0.4">
+  <animate  id="a2" attributeName="opacity" values="0.4;1" dur="0.4s"  begin="a1.end"  fill="freeze" ></animate>
+  <animate  id="b2" attributeName="opacity" values="1;0.4" dur="0.4s"  begin="b1.end"  fill="freeze" ></animate>
+
+</circle>
+  <circle  cx="400" cy="50" r="50" stroke-width="0" fill="currentColor"  opacity="0.4">
+  <animate id="a3" attributeName="opacity" values="0.4;1" dur="0.4s" begin="a2.end" fill="freeze"  ></animate>
+  <animate id="b3" attributeName="opacity" values="1;0.4" dur="0.4s" begin="b2.end"  fill="freeze" ></animate>
+
+</circle>
+</svg>

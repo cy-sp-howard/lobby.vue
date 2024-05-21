@@ -1,0 +1,61 @@
+.mask
+  background: #586592
+  opacity: 0
+  pointer-events: none
+  z-index: var(--z-dialog)
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  height: 100dvh
+  position: fixed
+  transition: opacity 0.3s
+  &[data-mask]:not([data-mask='0'])
+    opacity: 0.8
+    pointer-events: all
+
+.fade-enter-active,.fade-leave-active
+  animation: fade .2s
+.fade-leave-active
+  animation-direction: reverse
+
+.no-padding-dialog.rk-dialog > .dialog-box > .box-content
+  padding: 0
+
+.grecaptcha-badge
+    visibility: hidden !important
+    right: 0 !important
+    bottom: 0 !important
+
+.loading-logo
+  position: relative
+  --loading-size: 200px
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    background: #fff3
+    backdrop-filter: blur(5px)
+    z-index: 1
+  &::after
+    content: ''
+    z-index: 1
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    max-height: var(--loading-size)
+    $light: linear-gradient(-55deg,transparent 40%,#fffa,transparent 60%) no-repeat left calc(50% - var(--loading-size) / 1.5) top
+    background: $light,url(@img/logo.jpg) no-repeat center
+    background-size: var(--loading-size),var(--loading-size)
+    mask: url(@img/logo_mask.png) no-repeat center
+    mask-size: var(--loading-size)
+    animation: loading-light .6s infinite linear
+
+@keyframes loading-light
+  100%
+    background-position: left calc(50% + var(--loading-size) / 1.5) top,center

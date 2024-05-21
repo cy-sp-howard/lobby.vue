@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loading</title>
+  </head>
+
+  <body>
+    <style>
+      body {
+        --loading-size: 200px;
+        --light: linear-gradient(-55deg, transparent 40%, #fffa, transparent 60%) no-repeat left
+          calc(50% - var(--loading-size) / 1.5) top;
+        margin: 0;
+        height: 100vh;
+        height: 100dvh;
+        background:
+          var(--light),
+          url('<%= logoUrl %>') no-repeat center;
+        background-size: var(--loading-size), var(--loading-size);
+        mask: url('<%= logoMaskUrl %>') no-repeat center;
+        mask-size: var(--loading-size);
+        animation: loading-light 1s infinite linear;
+      }
+
+      @keyframes loading-light {
+        100% {
+          background-position:
+            left calc(50% + var(--loading-size) / 1.5) top,
+            center;
+        }
+      }
+    </style>
+  </body>
+</html>
